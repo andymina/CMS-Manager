@@ -15,7 +15,7 @@ db.ref().on("value", gotData, errData);
 function gotData(data){
 	$("#header-item").val(data.val().landing.header);
 	$("#tagline-item").text(data.val().landing.tagline);
-	$("#imgURL").css("background-image", "url(" + data.val().landing.imgURL + ")");
+	$("#img-1").attr("src", data.val().landing.imgURL);
 }
 
 function updateDB(){
